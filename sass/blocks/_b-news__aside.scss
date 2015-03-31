@@ -1,8 +1,7 @@
 .l-news__aside  {
-  outline: 1px solid red;
   position: relative;
-  
-  float: right;
+  float: left;
+  margin-left: 10px;
 }
 
 .b-news__aside {
@@ -10,6 +9,7 @@
   .title { 
     border-bottom: 1px solid $color-border--aside-1;
     margin-bottom: 5px;
+    padding-left: 1px;
   }
 }
 
@@ -33,4 +33,28 @@
   &--hot { 
     @extend .time-widget;
     font-weight: $font-weight-bold; }
+}
+
+.navigation-widget {
+  position: absolute;
+  bottom: 0;
+  width: 244px;
+  z-index: 99;
+  .btn,
+  .btn-arrow { 
+    float: left;
+    cursor: pointer;
+  }
+  .btn { margin-left: 5px; }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 244px;
+    height: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px #fff;
+    z-index: -1;
+  }
 }

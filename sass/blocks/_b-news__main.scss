@@ -1,5 +1,6 @@
 .l-news__main {
-  position: relative;
+  float: left;
+  margin-bottom: 50px;
 }
 
 .b-news__main {
@@ -11,24 +12,28 @@
   .img {
     width: 420px;
     height: 280px;
+    border-bottom: 4px solid $color-border--news;
   }
   .caption {
-    position: absolute;
-    bottom: 3px;
+    position: relative;
+    top: -58px;
     color: $color-text2;
-    background-color: rgba(64, 69, 75, .7);
-    .text { padding: 3px 10px 6px 10px; }
     .link-title {
+      display: block;
+      position: absolute;
+      overflow: hidden;
       text-decoration: none;
+      background-color: rgba(64, 69, 75, .9);
       .title { padding: 3px 10px 6px 10px; }
-      &:after { /* Создаем разделитель между заголовком и текстом */
-        content: "";
-        display: block;
-        border-bottom: 4px solid $color-border;
-        width: 100%;
-      }
     }
   }
+  .text { 
+    position: relative;
+    margin-top: -3px;
+    padding: 3px 10px 6px 10px;
+    background-color: rgba(64, 69, 75, 1);
+  }
+
 }
 
 .news-1,

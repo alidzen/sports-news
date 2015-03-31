@@ -3,7 +3,6 @@
 ===================================== */
 
 body {
-  outline: 1px dotted green;
   width: 696px;
   margin: 0 auto;
   padding-left: 12px;
@@ -11,9 +10,6 @@ body {
   font-size: $font-M;
   line-height: normal;
   color: $color-text1;
-//  background: url("../picture/test_tz.jpg") no-repeat 293px 0;
-//  opacity: .5;
-  
 }
 
 h1 { /* Только логотип */
@@ -87,6 +83,32 @@ h4 { /* Заголовки блоков в b-news__main */
     @extend %time-label;
     color: $color-time-2;
   }
+}
+
+.btn { /* Кнопка  */
+  display: block;
+  width: 200px;
+  height: 30px;
+  padding: 7px;
+  box-sizing: border-box;
+  border: 1px solid $color-border--aside-1;
+  border-radius: 3px;
+  background: linear-gradient(#fff, #ccc);
+  text-align: center;
+  font-size: $font-M;
+  font-weight: $font-weight-bold;
+  color: #000000;
+}
+
+.btn-arrow { /* кнопка-стрелка "вверх" */
+  display: block;
+  width: 35px;
+  height: 30px;
+  background: 
+    url("../img/arrow-up.png") 50% 50% no-repeat,
+    linear-gradient(#fff, #ccc);
+  border-radius: 3px;
+  border: 1px solid $color-border--aside-1;
 }
 
 
