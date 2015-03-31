@@ -3,6 +3,7 @@
 ===================================== */
 
 body {
+  outline: 1px dotted green;
   width: 696px;
   margin: 0 auto;
   padding-left: 12px;
@@ -10,13 +11,15 @@ body {
   font-size: $font-M;
   line-height: normal;
   color: $color-text1;
-  background-color: #ffffff;
+//  background: url("../picture/test_tz.jpg") no-repeat 293px 0;
+//  opacity: .5;
+  
 }
 
 h1 { /* Только логотип */
   font-family: $font-family-decor;
   font-size: 54px;
-  line-height: 1,255813953em; /* 54px / 43px */
+  line-height: 0.796296296em; /* 43px / 54px */
   color: $color-1;
 }
 
@@ -30,7 +33,7 @@ h2 { /* Заголовок в боковом блоке b-news__aside */
 h3 { /* Заголовок главной новости в блоке b-news__main--big */
   font-size: $font-L;
   font-weight: $font-weight-bold;
-  line-height: 1.166666667em; /* 21px / 18px : $font-L */
+  line-height: 1.166666667; /* 21px / 18px : $font-L */
   color: $color-text2;
 }
 
@@ -40,7 +43,7 @@ h4 { /* Заголовки блоков в b-news__main */
   color: $color-title;
 }
 
-.clearfix { /* Fix для float элементов */
+%clearfix { /* Fix для float элементов */
   &:before,
   &:after {
     content: "";
@@ -49,22 +52,41 @@ h4 { /* Заголовки блоков в b-news__main */
   &:after { clear: both; }
 }
 
-.label__footbal { /* стилизация меток к новостям */ 
+%label { /* стилизация меток к новостям */ 
+  margin-left: -3px;
+  padding: 0 2px 0 2px;
   margin-right: 3px;
-  padding: 0 3px 0 3px;
   font-family: $font-family-decor;
   font-size: $font-XS;
-  background-color: $color-label__footbal;
+  color: $color-text2;
 }
 
-.label__ice-hockey {
-  @extend .label__footbal;
-  background-color: $color-label__ice-hockey;
+.label {
+  &--football {
+    @extend %label;
+    background-color: $color-label__footbal
+  }
+  &--hockey {
+    @extend %label;
+    background-color: $color-label__hockey
+  }
+  &--box {
+    @extend %label;
+    background-color: $color-label__box
+  }
 }
 
-.label__box {
-  @extend .label__footbal;
-  background-color: $color-label__box;
+%time-label { 
+  padding-right: 2px;
+  color: $color-time-1;
+}
+
+.time-label {
+  &--general { @extend %time-label; }
+  &--usual { 
+    @extend %time-label;
+    color: $color-time-2;
+  }
 }
 
 

@@ -1,0 +1,36 @@
+.l-news__aside  {
+  outline: 1px solid red;
+  position: relative;
+  
+  float: right;
+}
+
+.b-news__aside {
+  width: 235px;
+  .title { 
+    border-bottom: 1px solid $color-border--aside-1;
+    margin-bottom: 5px;
+  }
+}
+
+.b-news__aside__item {
+  position: relative;
+  padding: 10px 0 6px 55px;
+  border-bottom: 1px solid $color-border--aside-2;
+  color: $color-text1;
+  .link { 
+    text-decoration: none;
+    color: $color-text1;
+  }
+}
+
+.time-widget { /* отдельно офрмляем widget, что бы добавить универсальности */
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  font-size: $font-L;
+  font-weight: $font-weight-regular;
+  &--hot { 
+    @extend .time-widget;
+    font-weight: $font-weight-bold; }
+}

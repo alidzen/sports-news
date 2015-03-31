@@ -78,13 +78,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* Colors */
 /* Цвет текста на белом фоне */
 /* Цвет текста на темном фоне */
-/* Текст заголовка h1, h2, навигации,  */
+/* Текст заголовка h1, навигации */
+/* Текст заголовка блока h2 b-news__aside */
 /* Бэкграунд навигации */
 /* Заголовки новостей, в блоке b-news__main */
+/* Используется в цвете подписи для news-general block news */
+/* Используется в цвете подписи для news-1, news-2  block news */
+/* Используется в подписи для news-general b-news*/
+                              /* Используется как разделитель новостных 
+блоков news-1, news-2 ... block news */
+/* цвет бордера под заголовком h2 в block news aside  */
+                                 /* цвет бордера между боковыми новостями 
+b-news__aside__item* /
+
+
+
 /* Typograthy */
 /* Основной шрифт */
 /* Шрифт боковой колонки с новостями */
-/* Основной заголовок h1, метки по тематикам */
+                                                          /* Основной заголовок 
+h1, метки по тематикам */
 /* Font-size */
 /* Font-weight */
 /*=====================================
@@ -92,6 +105,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 ===================================== */
 /* line 5, ../sass/base/_base.scss */
 body {
+  outline: 1px dotted green;
   width: 696px;
   margin: 0 auto;
   padding-left: 12px;
@@ -99,39 +113,38 @@ body {
   font-size: 14px;
   line-height: normal;
   color: #000000;
-  background-color: #ffffff;
 }
 
-/* line 16, ../sass/base/_base.scss */
+/* line 19, ../sass/base/_base.scss */
 h1 {
   /* Только логотип */
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 54px;
-  line-height: 1,255813953em;
-  /* 54px / 43px */
-  color: #3e454d;
+  line-height: 0.796296296em;
+  /* 43px / 54px */
+  color: #40454c;
 }
 
-/* line 23, ../sass/base/_base.scss */
+/* line 26, ../sass/base/_base.scss */
 h2 {
   /* Заголовок в боковом блоке b-news__aside */
   font-size: 21px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: 700;
-  color: #3e454d;
+  color: #40454c;
 }
 
-/* line 30, ../sass/base/_base.scss */
+/* line 33, ../sass/base/_base.scss */
 h3 {
   /* Заголовок главной новости в блоке b-news__main--big */
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.166666667em;
+  line-height: 1.166666667;
   /* 21px / 18px : $font-L */
   color: #ffffff;
 }
 
-/* line 37, ../sass/base/_base.scss */
+/* line 40, ../sass/base/_base.scss */
 h4 {
   /* Заголовки блоков в b-news__main */
   font-size: 18px;
@@ -139,38 +152,57 @@ h4 {
   color: #1e5ca9;
 }
 
-/* line 43, ../sass/base/_base.scss */
-.clearfix {
+/* line 46, ../sass/base/_base.scss */
+.news-1 .link-title,
+.news-2 .link-title {
   /* Fix для float элементов */
 }
-/* line 44, ../sass/base/_base.scss */
-.clearfix:before, .clearfix:after {
+/* line 47, ../sass/base/_base.scss */
+.news-1 .link-title:before,
+.news-2 .link-title:before, .news-1 .link-title:after,
+.news-2 .link-title:after {
   content: "";
   display: table;
 }
-/* line 49, ../sass/base/_base.scss */
-.clearfix:after {
+/* line 52, ../sass/base/_base.scss */
+.news-1 .link-title:after,
+.news-2 .link-title:after {
   clear: both;
 }
 
-/* line 52, ../sass/base/_base.scss */
-.label__footbal, .label__ice-hockey, .label__box {
+/* line 55, ../sass/base/_base.scss */
+.label--football, .label--hockey, .label--box {
   /* стилизация меток к новостям */
+  margin-left: -3px;
+  padding: 0 2px 0 2px;
   margin-right: 3px;
-  padding: 0 3px 0 3px;
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 11px;
-  background-color: #2a972e;
-}
-
-/* line 60, ../sass/base/_base.scss */
-.label__ice-hockey {
-  background-color: #0089d1;
+  color: #ffffff;
 }
 
 /* line 65, ../sass/base/_base.scss */
-.label__box {
+.label--football {
+  background-color: #2a972e;
+}
+/* line 69, ../sass/base/_base.scss */
+.label--hockey {
+  background-color: #0089d1;
+}
+/* line 73, ../sass/base/_base.scss */
+.label--box {
   background-color: #841116;
+}
+
+/* line 79, ../sass/base/_base.scss */
+.time-label--general, .time-label--usual {
+  padding-right: 2px;
+  color: #fa8d4a;
+}
+
+/* line 86, ../sass/base/_base.scss */
+.time-label--usual {
+  color: #989898;
 }
 
 /*
@@ -178,3 +210,140 @@ h4 {
 *
 */
 /* Blocks */
+/* line 1, ../sass/blocks/_b-header.scss */
+.b-header {
+  margin-bottom: 10px;
+}
+
+/* line 2, ../sass/blocks/_b-header.scss */
+.b-header__title {
+  padding: 12px 0;
+  background: url("../img/gradient-title.jpg") left bottom repeat-x;
+}
+
+/* line 7, ../sass/blocks/_b-header.scss */
+.b-header__nav {
+  padding: 10px 0 15px 10px;
+  width: 623px;
+  background: url("../img/gradient-nav.jpg") left bottom repeat-x;
+}
+
+/* line 13, ../sass/blocks/_b-header.scss */
+.b-nav__item {
+  display: inline-block;
+}
+/* line 16, ../sass/blocks/_b-header.scss */
+.b-nav__item a {
+  color: #565d66;
+}
+
+/* line 1, ../sass/blocks/_b-news__main.scss */
+.l-news__main {
+  position: relative;
+}
+
+/* line 5, ../sass/blocks/_b-news__main.scss */
+.b-news__main {
+  width: 420px;
+}
+
+/* line 9, ../sass/blocks/_b-news__main.scss */
+.news-general {
+  position: relative;
+}
+/* line 11, ../sass/blocks/_b-news__main.scss */
+.news-general .img {
+  width: 420px;
+  height: 280px;
+}
+/* line 15, ../sass/blocks/_b-news__main.scss */
+.news-general .caption {
+  position: absolute;
+  bottom: 3px;
+  color: #ffffff;
+  background-color: rgba(64, 69, 75, 0.7);
+}
+/* line 20, ../sass/blocks/_b-news__main.scss */
+.news-general .caption .text {
+  padding: 3px 10px 6px 10px;
+}
+/* line 21, ../sass/blocks/_b-news__main.scss */
+.news-general .caption .link-title {
+  text-decoration: none;
+}
+/* line 23, ../sass/blocks/_b-news__main.scss */
+.news-general .caption .link-title .title {
+  padding: 3px 10px 6px 10px;
+}
+/* line 24, ../sass/blocks/_b-news__main.scss */
+.news-general .caption .link-title:after {
+  /* Создаем разделитель между заголовком и текстом */
+  content: "";
+  display: block;
+  border-bottom: 4px solid #777a7f;
+  width: 100%;
+}
+
+/* line 34, ../sass/blocks/_b-news__main.scss */
+.news-1,
+.news-2 {
+  padding: 13px 0 10px 0;
+  border-bottom: 1px solid #cdccd4;
+}
+/* line 38, ../sass/blocks/_b-news__main.scss */
+.news-1 .img,
+.news-2 .img {
+  float: left;
+  width: 180px;
+  height: 120px;
+  padding: 4px 10px 10px 0;
+}
+/* line 44, ../sass/blocks/_b-news__main.scss */
+.news-1 .link-title,
+.news-2 .link-title {
+  text-decoration: none;
+}
+
+/* line 1, ../sass/blocks/_b-news__aside.scss */
+.l-news__aside {
+  outline: 1px solid red;
+  position: relative;
+  float: right;
+}
+
+/* line 8, ../sass/blocks/_b-news__aside.scss */
+.b-news__aside {
+  width: 235px;
+}
+/* line 10, ../sass/blocks/_b-news__aside.scss */
+.b-news__aside .title {
+  border-bottom: 1px solid #989898;
+  margin-bottom: 5px;
+}
+
+/* line 16, ../sass/blocks/_b-news__aside.scss */
+.b-news__aside__item {
+  position: relative;
+  padding: 10px 0 6px 55px;
+  border-bottom: 1px solid #d6d6d6;
+  color: #000000;
+}
+/* line 21, ../sass/blocks/_b-news__aside.scss */
+.b-news__aside__item .link {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* line 27, ../sass/blocks/_b-news__aside.scss */
+.time-widget, .time-widget--hot {
+  /* отдельно офрмляем widget, что бы добавить универсальности */
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  font-size: 18px;
+  font-weight: 400;
+}
+/* line 33, ../sass/blocks/_b-news__aside.scss */
+.time-widget--hot {
+  font-weight: 700;
+}

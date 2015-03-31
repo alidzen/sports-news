@@ -5,18 +5,29 @@
 /* Colors */
 $color-text1: #000000; /* Цвет текста на белом фоне */
 $color-text2: #ffffff; /* Цвет текста на темном фоне */
-$color-1: #3e454d; /* Текст заголовка h1, h2, навигации,  */
+$color-1: #40454c; /* Текст заголовка h1, навигации */
+$color-2: #565d66; /* Текст заголовка блока h2 b-news__aside */
 $color-bg: #f5f5f5; /* Бэкграунд навигации */
 $color-title: #1e5ca9; /* Заголовки новостей, в блоке b-news__main */
 $color-label__footbal: #2a972e;
-$color-label__ice-hockey: #0089d1;
+$color-label__hockey: #0089d1;
 $color-label__box: #841116;
+$color-time-1: #fa8d4a; /* Используется в цвете подписи для news-general block news */
+$color-time-2: #989898; /* Используется в цвете подписи для news-1, news-2  block news */
+$color-border: #777a7f; /* Используется в подписи для news-general b-news*/
+$color-border--news: #cdccd4; /* Используется как разделитель новостных 
+блоков news-1, news-2 ... block news */
+$color-border--aside-1: #989898; /* цвет бордера под заголовком h2 в block news aside  */
+$color-border--aside-2: #d6d6d6; /* цвет бордера между боковыми новостями 
+b-news__aside__item* /
+
 
 
 /* Typograthy */
 $font-family-base: Arial, Helvetica, sans-serif; /* Основной шрифт */
 $font-family-news: "Trebuchet MS", Helvetica, sans-serif; /* Шрифт боковой колонки с новостями */
-$font-family-decor: Tahoma, Arial, Helvetica, sans-serif; /* Основной заголовок h1, метки по тематикам */
+$font-family-decor: Tahoma, Arial, Helvetica, sans-serif; /* Основной заголовок 
+h1, метки по тематикам */
 
 
 /* Font-size */

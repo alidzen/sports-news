@@ -1,0 +1,54 @@
+.l-news__main {
+  position: relative;
+}
+
+.b-news__main {
+  width: 420px;
+}
+
+.news-general {
+  position: relative;
+  .img {
+    width: 420px;
+    height: 280px;
+  }
+  .caption {
+    position: absolute;
+    bottom: 3px;
+    color: $color-text2;
+    background-color: rgba(64, 69, 75, .7);
+    .text { padding: 3px 10px 6px 10px; }
+    .link-title {
+      text-decoration: none;
+      .title { padding: 3px 10px 6px 10px; }
+      &:after { /* Создаем разделитель между заголовком и текстом */
+        content: "";
+        display: block;
+        border-bottom: 4px solid $color-border;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.news-1,
+.news-2 {
+  padding: 13px 0 10px 0;
+  border-bottom: 1px solid $color-border--news;
+  .img { 
+    float: left;
+    width: 180px;
+    height: 120px;
+    padding: 4px 10px 10px 0;
+  }
+  .link-title {
+    text-decoration: none;
+    @extend %clearfix;
+  }
+}
+
+
+
+
+
+
