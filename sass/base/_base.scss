@@ -1,0 +1,57 @@
+/*=====================================
+   Base styles. Задаем переменные, заголовки, body и прочее  по умолчанию.
+===================================== */
+
+body {
+  width: 696px;
+  margin: 0 auto;
+  padding-left: 12px;
+  font: normal 400 12px/18px $font-family-base;
+  color: $color-4;
+  background-color: #ffffff;
+}
+
+h1 { /* Только логотип */
+  font-size: $font-XXl;
+  color: $color-1;
+  text-transform: uppercase;
+}
+
+h2 { /* Заголовок в слайдере, в блоке features */
+  font-size: $font-L;
+  font-family: $font-family-news;
+  line-height: 24px;
+  color: $color-1;
+  text-transform: uppercase;
+}
+
+h3 { /* Подписи к работам в блоке portfolio */
+  font-size: $font-M;
+  font-family: $font-family-base;
+  line-height: 18px;
+  color: $color-3;
+  text-transform: uppercase;
+}
+
+h4 { /* Заголовки блоков в footer */
+  font-size: $font-XL;
+  font-family: $font-family-base;
+  color: $color-2;
+  text-transform: uppercase;
+}
+
+.clearfix { /* Fix для float элементов */
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after { clear: both; }
+}
+
+
+
+/*
+* END Base styles.
+*
+*/
