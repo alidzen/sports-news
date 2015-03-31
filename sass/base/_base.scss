@@ -6,38 +6,38 @@ body {
   width: 696px;
   margin: 0 auto;
   padding-left: 12px;
-  font: normal 400 12px/18px $font-family-base;
-  color: $color-4;
+  font-family: $font-family-base;
+  font-size: $font-M;
+  line-height: normal;
+  color: $color-text1;
   background-color: #ffffff;
 }
 
 h1 { /* Только логотип */
-  font-size: $font-XXl;
+  font-family: $font-family-decor;
+  font-size: 54px;
+  line-height: 1,255813953em; /* 54px / 43px */
   color: $color-1;
-  text-transform: uppercase;
 }
 
-h2 { /* Заголовок в слайдере, в блоке features */
-  font-size: $font-L;
-  font-family: $font-family-news;
-  line-height: 24px;
-  color: $color-1;
-  text-transform: uppercase;
-}
-
-h3 { /* Подписи к работам в блоке portfolio */
-  font-size: $font-M;
-  font-family: $font-family-base;
-  line-height: 18px;
-  color: $color-3;
-  text-transform: uppercase;
-}
-
-h4 { /* Заголовки блоков в footer */
+h2 { /* Заголовок в боковом блоке b-news__aside */
   font-size: $font-XL;
-  font-family: $font-family-base;
-  color: $color-2;
-  text-transform: uppercase;
+  font-family: $font-family-news;
+  font-weight: $font-weight-bold;
+  color: $color-1;
+}
+
+h3 { /* Заголовок главной новости в блоке b-news__main--big */
+  font-size: $font-L;
+  font-weight: $font-weight-bold;
+  line-height: 1.166666667em; /* 21px / 18px : $font-L */
+  color: $color-text2;
+}
+
+h4 { /* Заголовки блоков в b-news__main */
+  font-size: $font-L;
+  font-weight: $font-weight-bold;
+  color: $color-title;
 }
 
 .clearfix { /* Fix для float элементов */
@@ -47,6 +47,24 @@ h4 { /* Заголовки блоков в footer */
     display: table;
   }
   &:after { clear: both; }
+}
+
+.label__footbal { /* стилизация меток к новостям */ 
+  margin-right: 3px;
+  padding: 0 3px 0 3px;
+  font-family: $font-family-decor;
+  font-size: $font-XS;
+  background-color: $color-label__footbal;
+}
+
+.label__ice-hockey {
+  @extend .label__footbal;
+  background-color: $color-label__ice-hockey;
+}
+
+.label__box {
+  @extend .label__footbal;
+  background-color: $color-label__box;
 }
 
 

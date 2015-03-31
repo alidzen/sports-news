@@ -2,30 +2,31 @@
    Settings. Задаем переменные.
 ======================================= */
 
-/* Font-size */
-$font-S: 12px;
-.font-S { font-size: 12px; }
-
-$font-M: 16px;
-.font-M { font-size: 16px; }
-
-$font-L: 18px;
-.font-L { font-size: 18px; }
-
-$font-XL: 20px;
-.font-XL { font-size: 20px; }
-
-$font-XXl: 36px;
-.font-XXL { font-size: 36px; }
-
 /* Colors */
 $color-text1: #000000; /* Цвет текста на белом фоне */
 $color-text2: #ffffff; /* Цвет текста на темном фоне */
-$color-1: #3e454d; /* Текст заголовка H1, навигации,  */
+$color-1: #3e454d; /* Текст заголовка h1, h2, навигации,  */
 $color-bg: #f5f5f5; /* Бэкграунд навигации */
 $color-title: #1e5ca9; /* Заголовки новостей, в блоке b-news__main */
-$color-4: #414141; /* Текс на белом фоне */
+$color-label__footbal: #2a972e;
+$color-label__ice-hockey: #0089d1;
+$color-label__box: #841116;
+
 
 /* Typograthy */
 $font-family-base: Arial, Helvetica, sans-serif; /* Основной шрифт */
 $font-family-news: "Trebuchet MS", Helvetica, sans-serif; /* Шрифт боковой колонки с новостями */
+$font-family-decor: Tahoma, Arial, Helvetica, sans-serif; /* Основной заголовок h1, метки по тематикам */
+
+
+/* Font-size */
+$font-XS: 11px;
+$font-S: 12px;
+$font-M: 14px;
+$font-L: 18px;
+$font-XL: 21px;
+ 
+/* Font-weight */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
