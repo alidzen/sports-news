@@ -26,7 +26,7 @@ h2 { /* Заголовок в боковом блоке b-news__aside */
   color: $color-1;
 }
 
-h3 { /* Заголовок главной новости в блоке b-news__main--big */
+h3 { /* Заголовок главной новости в блоке b-news main-general */
   font-size: $font-L;
   font-weight: $font-weight-bold;
   line-height: 1.166666667; /* 21px / 18px : $font-L */
@@ -72,7 +72,7 @@ h4 { /* Заголовки блоков в b-news__main */
   }
 }
 
-%time-label { 
+%time-label { /* Стили отображения времени появления новости в b-news__main */
   padding-right: 2px;
   color: $color-time-1;
 }
@@ -109,6 +109,25 @@ h4 { /* Заголовки блоков в b-news__main */
     linear-gradient(#fff, #ccc);
   border-radius: 3px;
   border: 1px solid $color-border--aside-1;
+}
+
+.comment-flag { /* Декоративный элемент, показывающий количество комментариев  */
+  position: relative;
+  top: -4px;
+  display: inline-block;
+  padding: 0 4px;
+  font-size: $font-XS;
+  color: $color-text2;
+  background-color: $color-bg-2;
+  &:after {
+    content: "";
+    position: absolute;
+	left: 3px;
+    border-left: 5px solid $color-bg-2;
+	border-right: 5px solid rgba(113, 101, 58, 0);
+	border-bottom: 5px solid rgba(113, 101, 58, 0);
+  }
+
 }
 
 
