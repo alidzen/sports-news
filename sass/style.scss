@@ -1,25 +1,23 @@
-/* Compass */
+/*** Compass ***/
 @import "compass";
 
-/* Utilities */
-@import "utilities/_utilities.scss";
-
-/* Base */
+/*** Base ***/
 @import "base/_reset";
 @import "base/_settings";
 @import "base/_base";
 
-/* Blocks */
+/*** Blocks ***/
 @import "blocks/_b-header";
 @import "blocks/_b-news__main";
 @import "blocks/_b-news__aside";
 
+/*** Modules ***/
+@import "modules/_buttons";
+@import "modules/_time-widget";
+@import "modules/_comment-flag";
 
 /*
-1. Comments widget
-2. Sub << instead "
 3. IE8 required
-4. Comments, and other decorations styles to anothe folder
 5. Normal style guide
 6. Delete helpfull comments
 */

@@ -1,0 +1,15 @@
+.b-nav__item {
+  display: inline;
+}
+
+.btn { /* Градиент для кнопки */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffffff",
+    endColorstr="#cccccccc", GradientType=0);
+}
+
+.btn-arrow { /* Градиент и изображение для кнопки вверх  */
+  background: url("../img/arrow-up.png") 50% 50% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffffff",
+    endColorstr="#cccccccc", GradientType=0);
+}
+

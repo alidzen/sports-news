@@ -1,0 +1,10 @@
+.time-widget { /* отдельно оформляем widget, что бы добавить универсальности */
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  font-size: $font-L;
+  font-weight: $font-weight-regular;
+  &--hot { /* последняя новость */
+    @extend .time-widget;
+    font-weight: $font-weight-bold; }
+}

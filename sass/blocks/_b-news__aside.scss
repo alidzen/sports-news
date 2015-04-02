@@ -1,3 +1,7 @@
+/*=====================================
+   Block news aside. Новости, находящиеся справо от основного блока новостей.
+===================================== */
+
 .l-news__aside  {
   position: relative;
   float: left;
@@ -24,37 +28,3 @@
   }
 }
 
-.time-widget { /* отдельно офрмляем widget, что бы добавить универсальности */
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  font-size: $font-L;
-  font-weight: $font-weight-regular;
-  &--hot { 
-    @extend .time-widget;
-    font-weight: $font-weight-bold; }
-}
-
-.navigation-widget {
-  position: absolute;
-  bottom: 0;
-  width: 244px;
-  z-index: 99;
-  .btn,
-  .btn-arrow { 
-    float: left;
-    cursor: pointer;
-  }
-  .btn { margin-left: 5px; }
-  &:after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    display: block;
-    width: 244px;
-    height: 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px 10px #fff;
-    z-index: -1;
-  }
-}

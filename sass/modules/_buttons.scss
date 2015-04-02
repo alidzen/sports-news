@@ -1,0 +1,63 @@
+
+.btn { /* Кнопка  */
+  display: block;
+  width: 200px;
+  height: 30px;
+  border: 1px solid $color-border--aside-1;
+  border-radius: 3px;
+  background-image: linear-gradient(#fff, #ccc);
+  background-image: -o-linear-gradient(#fff, #ccc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#cccccc));
+  text-align: center;
+  font-size: $font-M;
+  font-weight: $font-weight-bold;
+  color: #000000;
+  vertical-align: middle;
+  &:before { /* Фикс, центрующий строку по середине */
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.btn-arrow { /* кнопка-стрелка "вверх" */
+  display: block;
+  width: 35px;
+  height: 30px;
+  background: url("../img/arrow-up.png") 50% 50% no-repeat,
+    linear-gradient(#fff, #ccc);
+  background: url("../img/arrow-up.png") 50% 50% no-repeat,
+    -o-linear-gradient(#fff, #ccc);
+  background: url("../img/arrow-up.png") 50% 50% no-repeat,
+    -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#cccccc));
+  border-radius: 3px;
+  border: 1px solid $color-border--aside-1;
+}
+
+.navigation-widget {
+  position: absolute;
+  bottom: 0;
+  width: 244px;
+  z-index: 99;
+  .btn,
+  .btn-arrow {
+    float: left;
+    cursor: pointer;
+  }
+  .btn { margin-left: 5px; }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 244px;
+    height: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px #fff;
+    box-shadow: -webkit-0 0 10px 10px #fff;
+    box-shadow: -moz-0 0 10px 10px #fff;
+    box-shadow: -o-0 0 10px 10px #fff;
+    z-index: -1;
+  }
+}

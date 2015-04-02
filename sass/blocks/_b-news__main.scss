@@ -1,3 +1,8 @@
+/*=====================================
+   Block news main. Основные новости, находящиеся по цетру. Состоит из главной
+новости и нескольких основных.
+===================================== */
+
 .l-news__main {
   float: left;
   margin-bottom: 50px;
@@ -50,6 +55,9 @@
   .link-title {
     text-decoration: none;
     @extend %clearfix;
+    .title {
+      @extend %clearfix;
+    }
   }
 }
 
